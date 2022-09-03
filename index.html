@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante FG</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <h1>Restaurante FG</h1>
+        </header>
+
+        <main class="main">
+            <div class="main_form">
+                <form action="">
+                    <fieldset>
+                        <legend>Formulario de Registro</legend>
+
+                        <label for="Nombre"> Nombre
+                            <input type="text" id="Nombre" name="Nombre" placeholder="Ingrese solo nombres" required autocomplete="off">
+                        </label>
+                        
+                        <label for="Apellidos"> Apellidos
+                            <input type="text" id="Apellidos" name="Apellidos" placeholder="Ingrese solo apellidos" required autocomplete="off">
+                        </label>
+                        
+                        <label for="E-Mail"> E-Mail
+                            <input type="email" id="E-Mail" name="E-Mail" placeholder="Dirección de correo electrónico" required autocomplete="off">
+                        </label>
+
+                        <label for="Contraseña"> Contraseña
+                            <input type="password" id="Contraseña" name="Contraseña" placeholder="Password" required>
+                        </label>
+
+                        <label for="Registrar">
+                            <input type="submit" id="Registrar" name="Registrar" value="Registrar">
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        
+        <aside class="leftAside">
+            <nav>
+                <figure>
+                    <img src="./images/Logo.png" alt="Logo" height="100px">                
+                </figure>
+                
+                <h3>Nuestro Menú</h3>
+                <ul>
+                    <li><a href="#"> Formulario de Registro </a></li>
+                    <li><a href="./pages/gestion.html"> Gestionar Catalogo </a></li>
+                    <li><a href="./pages/catalogo.html"> Ver Catalogo de Productos </a></li>
+                    <li><a href="./pages/carrito.html"> Ver Carrito </a></li>
+                    <li><a id="op5" href="./pages/confirmar.html"> Confirmar Pedido </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <footer class="footer">
+            <span>Avenida del Emprendimiento, Zona del Soñador</span> <br>
+            <span>Ciudad de Guatemala</span> <br>
+            <span>&copy2022 Restaurante FG - Todos los derechos reservados;</span> <br>
+            <span>Contáctanos: restauranteFG@FakeGmail.com</span>
+        </footer>
+    </div>
+</body>
+
+</html>

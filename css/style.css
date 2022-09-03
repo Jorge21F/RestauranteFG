@@ -1,0 +1,268 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas: 
+      "header header header" 
+      "aside main main" 
+      "footer footer footer"
+    ;
+}
+
+header{
+    padding: 10px;
+    margin-bottom: 5px;
+    grid-area: header;
+    text-align: center;
+    background-image: linear-gradient(to bottom, orange, red);
+    color: white;
+}
+
+main { grid-area: main; align-self: center; }
+aside { grid-area: aside; }
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-image: linear-gradient(to top, orange, red);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+hr{ 
+    margin-bottom: 20px; 
+}
+
+main h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 8px auto;
+}
+
+nav ul li {
+    list-style: none;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    padding: 10px;
+    border: solid black 2px;
+    margin: 8px;
+    width: 150px;
+}
+
+#op5 {
+    padding-bottom: 20px;
+}
+
+nav ul li a:hover {
+    background-color: red;
+}
+
+.main_form fieldset {
+    margin: 20px;
+    padding: 50px;
+}
+
+.main_form fieldset legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+.main_form label {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+input:required::placeholder {
+    color:red;
+}
+
+input[type=submit] {
+    grid-column: 2;
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+}
+
+input[type=button] {
+    background-color: blue;
+    color: white;
+    width: max-content;
+    padding: 8px;
+    font-size: 20px;
+    margin: 10px 0px 20px 20px;
+}
+
+
+input[type=submit]:hover {
+    background-color: red;
+}
+
+input[type=button]:hover {
+    background-color: green;
+}
+
+#reset {
+    background-color: red;
+}
+
+#reset:hover {
+    background-color: purple;
+}
+
+
+
+/*                      Estilos para las tablas */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+}
+
+tr td:nth-child(2) {
+    word-break: break-all;
+    text-align: left;
+}
+
+tr:nth-child(even) { 
+    background-color: lime; 
+    color: black;
+}
+
+tr:nth-child(odd) { 
+    background-color: cyan;
+    color: black
+}
+
+th {
+    background-color: darkblue; 
+    color: white;
+}
+
+table tr:hover { 
+    background-color: crimson; 
+}
+
+/* A la tabla de Gestionar le oculta la columna con el boton de agregar al carrito */
+#tablaProductos tr td:nth-child(5){
+    display: none;
+}
+
+/* A la tabla de Ver Catalogo le oculta la columna con el boton de borrar producto */
+#tablaCatalogo tr td:nth-child(6){
+    display: none;
+}
+
+/* Oculta los botones para aumentar o disminuir la cantidad de productos */
+#tablaCarrito tr input[type=button] {
+    display: none;
+}
+
+/*          Estilos para el caption de la tabla */
+table caption{
+    caption-side:bottom; 
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+table caption hr{
+    margin-bottom: 5px;
+}
+
+/*          Estilos para los botones dentro de tablas */
+tr input[type=button] {
+    margin: auto;
+    border-width: 3px;
+}
+
+tr .menos {
+    border-radius: 50%; 
+    padding: 4px;
+    background-color: gray;
+}
+
+tr .mas {
+    border-radius: 50%; 
+    padding: 3px;
+    background-color: blue;
+}
+
+tr .borrar {
+    border-radius: 50%; 
+    padding: 3px;
+    background-color: red;
+}
+
+
+
+/*                  Estilos de imagenes */
+.imagen {
+    height: 10vh;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#activa {
+    opacity: 1;
+}
+
+.imgMenu {
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-content: stretch;
+}
+
+/* Da formato a las imagenes dentro de las tablas */
+.imgTabla {
+    height: 15vh;
+}
+
+/* Para que el apartado de seleccionar imagenes ocupe todo el espacio del main */
+#lblImagenes {
+    grid-template-columns: 1fr;
+}
+
+
+/* Media query para pantallas mas pequeñas */
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas: "header" "main" "aside" "footer";
+    }
+
+    .main_form label {
+        grid-template-columns: 1fr;
+    }
+}

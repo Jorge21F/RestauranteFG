@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG - Gestion</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<!-- Imprime la tabla de productos al cargar el body -->
+<body onload="imprimirTabla()">
+    <div class="contenedor">
+        <header class="header">
+            <h1>Restaurante FG</h1>
+        </header>
+
+        <main class="main">
+            <h1>Gestionar Catalogo de productos</h1>
+            <hr>
+            <div class="main_form">
+                <form action="">
+
+                    <label for="codigo">Codigo
+                        <input type="number" id="codigo" name="codigo" placeholder="Ingrese solo Numeros" autocomplete="off">
+                    </label>
+                    
+                    <label for="nombre">Nombre
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombre del producto" autocomplete="off">
+                    </label>
+    
+                    <label for="precio">Precio
+                        <input type="number" id="precio" name="precio" placeholder="Ingrese solo Numeros" autocomplete="off">
+                    </label>
+
+                    <label for="imagenes" id="lblImagenes">Seleccionar Imagen
+                        <div class="imgMenu" id="imgMenu">
+                            <img src="../images/Burrito.jpg" alt="Burrito" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Hamburguesa.jpg" alt="Hamburguesa" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/HotDog.jpg" alt="HotDog" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Pizza.jpg" alt="Pizza" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Papas.jpg" alt="Papas" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Donas.jpg" alt="Donas" class="imagen" onclick="seleccionIMG(this)">
+
+                            <img src="../images/Cafe.jpg" alt="Cafe" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Limonada.jpg" alt="Limonada" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Jugo.jpg" alt="Jugo" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/CocaCola.jpg" alt="CocaCola" class="imagen" onclick="seleccionIMG(this)">
+                            <img src="../images/Pepsi.jpg" alt="Pepsi" class="imagen" onclick="seleccionIMG(this)">
+                        </div>
+                    </label>
+                    <input type="button" id="guardar" name="guardar" value="Guardar" onclick="guardarProducto()">
+                </form>
+            </div>
+            
+            <hr>
+
+            <table class="table" id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+
+                <tbody id="detalle">    </tbody>
+            </table>
+
+            <input type="button" id="reset" name="reset" value="RESET" onclick="borrarLocal()">
+        </main>
+        
+        <aside class="leftAside">
+            <nav>
+                <figure>
+                    <img src="../images/Logo.png" alt="Logo" height="100px">                
+                </figure>
+                
+                <h3>Nuestro Menú</h3>
+                <ul>
+                    <li><a href="../index.html"> Formulario de Registro </a></li>
+                    <li><a href="#"> Gestionar Catalogo </a></li>
+                    <li><a href="./catalogo.html"> Ver Catalogo de Productos </a></li>
+                    <li><a href="./carrito.html"> Ver Carrito </a></li>
+                    <li><a id="op5" href="./confirmar.html"> Confirmar Pedido </a></li>
+                </ul>
+            </nav>
+            </nav>
+        </aside>
+
+        <footer class="footer">
+            <span>Avenida del Emprendimiento, Zona del Soñador</span> <br>
+            <span>Ciudad de Guatemala</span> <br>
+            <span>&copy2022 Restaurante FG - Todos los derechos reservados;</span> <br>
+            <span>Contáctanos: restauranteFG@FakeGmail.com</span>
+        </footer>
+    </div>
+</body>
+
+</html>
